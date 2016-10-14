@@ -1,0 +1,20 @@
+<h1>Workout Log!</h1>
+<%Workout.all.each do |workout|%>
+<h3>
+ <%=link_to workout.date, workouts_path%>
+</h3>
+
+  <p>
+  <%=workout.workout%>
+  </p>
+
+  <p>
+  <%=workout.length%>
+  </p>
+  <p>
+  <%=workout.mood%>
+  </p>
+  <%=link_to "Edit", edit_workout_path(@workout)%>
+  <%=link_to "Delete", workout_path(@workout), method: :delete%>
+
+<%end%>
