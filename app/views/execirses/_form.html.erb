@@ -1,0 +1,9 @@
+<%=form_for([@workout, @workout.execirses.build]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+    <%= f.label :sets %>
+  <%= f.text_field :sets %>
+    <%= f.label :rep %>
+  <%= f.text_field :rep%>
+  <%=f.submit%>
+  <%end%>
