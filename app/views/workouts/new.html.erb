@@ -1,0 +1,13 @@
+<h1>Create a New Workout!</h1>
+<%= form_for(@workout, layout: :horizontal) do |f| %>
+  <%= f.label :your_mood? %>
+  <%= f.text_field :mood %>
+  <%= f.label :what_workout? %>
+  <%= f.text_field :workout %>
+  <%= f.label :how_long_was_your_workout? %>
+  <%= f.text_field :length %>
+  <%= f.label :date %>
+  <%= f.date_select :date %>
+  <%=link_to "Cancel", root_path%>
+
+ <%end%>
